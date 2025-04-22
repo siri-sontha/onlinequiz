@@ -48,13 +48,13 @@ html{
 
 @media screen and (max-width: 36em){
     html{
-        font-size: 10px;
+        font-size: 7px;
     }
 }
 
 .container{
     position: relative; /* or 'relative' or 'fixed', depending on your layout */
-    max-width: 1200px;
+    max-width: 1100px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -70,6 +70,8 @@ ul{
 a{
     text-decoration: none;
 }
+
+/* START-NAVIGATION BAR */
 
 nav{
     padding: 0.8rem 1rem;
@@ -124,9 +126,13 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     transform: translateY(-50%);
 }
 
+/* END-NAVIGATION BAR */
+
+/* START-ALL KEYWORDS ROW */
+
 .keyWordsDiv{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1rem, 7rem));
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
@@ -141,7 +147,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 .keyWordBlock{
     background-color: #fcd24f;
-    padding: 0.3rem 0rem;
+    padding: 0.3rem 0.6rem;
     border: 0.14rem solid #f8f2de;
     border-radius: 1rem;
     text-transform: uppercase;
@@ -154,20 +160,23 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     text-align: center;
 }
 
+/* END-ALL KEYWORDS ROW */
+
+/* START-HERO SECTION */
+
 .heroSec{
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-top: 1.2rem;
-    display: flex;
+    margin: 1.2rem 1rem 1.2rem 1rem;
+    display: grid;
+    grid-template-columns: 4fr 2fr;
     gap: 0.5rem;
 }
 
 .quizCard-L{
     background-color: #fcd24f;
-    width: 80%;
     height: 18.6rem;
     border: 0.1rem solid #f8f2de;
     text-align: center;
+    margin-bottom: 0.8rem;
 }
 
 .quizCard-L img{
@@ -183,6 +192,46 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-size: 1.2rem;
     color: black;
     text-align: center; 
+}
+
+.mediumQuizCardsDiv{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.quizCard-M{
+    background-color: #fcd24f;
+    height: 13.7rem;
+    border: 0.1rem solid #f8f2de;
+    text-align: center;
+    width: 48%;
+    padding: 0.45rem;
+    text-align: left;
+}
+
+.quizCard-M p:nth-of-type(1){
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1rem;
+    margin-top: 0.18rem;
+    margin-bottom: 0.28rem;
+}
+
+.quizCard-M p:nth-of-type(2){
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 0.7rem;
+    line-height: 0.8rem;
+}
+
+.quizCard-M img{
+    height: 7.5rem;
+    width: 100%;
+    border: 0.09rem solid #f8f2de;
 }
 
 .smallQuizCardsDiv{
@@ -215,5 +264,149 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     max-width: 10rem;
     line-height: 0.9rem;
 }
+
+/* END-HERO SECTION */
+
+/* START-LEADER BOARD & COMMENTS SECTION */
+
+.leaderBoardCommentSec{
+    display: flex;
+    margin: 2.2rem 1rem 1.2rem 1rem;
+    gap: 1rem;
+}
+
+.leaderBoard{
+    background-color: #f8f2de;
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border: 0.1rem solid black;
+    gap: 1.2rem;
+}
+
+.divTitle{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2rem;
+    color: black; 
+    text-transform: capitalize;
+    margin-bottom: 0.6rem;
+}
+
+.comments{
+    width: 33%;
+    background-color: #f8f2de;
+    border: 0.1rem solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1.2rem;
+}
+
+.userPoints{
+    display: flex;
+    background-color: #fcd24f;
+    border: 0.1rem solid white;
+    width: 80%;
+    padding: 0.3rem 0;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 0.5rem;
+}
+
+.userIcon p{
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid white;
+    background-color: #c076b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.userName{
+    font-size: 1.4rem;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.pointsVal{
+    color: #d84040;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 1.28rem;
+}
+
+.pointsWord{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 0.8rem;
+    line-height: 0.6rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.comment{
+    background-color: #fcd24f;
+    padding: 0.5rem;
+    border: 0.001rem solid rgb(80, 76, 76);
+}
+
+.userIconId{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.userIconComment{
+    background-color: #c076b9;
+    height: 1.2rem;
+    width: 1.2rem;
+    color: white;
+    border-radius: 0.2rem;
+    border: 0.008rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+.userNameComment{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: black;
+}
+
+.commentText{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: black;
+}
+
+/* END-LEADER BOARD & COMMENTS SECTION */
 
 /* SRI KRISHNA */
