@@ -31,7 +31,13 @@
 }
 
 html{
-    font-size: 22px;
+    font-size: 26px;
+}
+
+@media screen and (max-width: 70em){
+    html{
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 62em){
@@ -54,9 +60,10 @@ html{
 
 .container{
     position: relative; /* or 'relative' or 'fixed', depending on your layout */
-    max-width: 1100px;
+    max-width: 1500px;
     left: 50%;
     transform: translateX(-50%);
+    overflow: hidden;
 }
 
 body{
@@ -132,17 +139,16 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 .keyWordsDiv{
     display: flex;
-    flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 0.4rem; 
-    border-bottom: 0.001rem solid #f8f2de;
-    overflow: hidden;
-    max-height: 2.84rem;
-    row-gap: 1rem;
+    margin-top: 0.4rem;
+}
+
+.line{
+    width: 100%;
+    height: 0.001rem;
+    background-color: white;
 }
 
 .keyWordBlock{
@@ -159,6 +165,21 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     white-space: nowrap;
     text-align: center;
 }
+
+.marquee{
+    animation: scroll 42s linear infinite;
+    
+}
+
+@keyframes scroll {
+    0% { 
+        transform: translateX(60%); 
+    }
+    100% { 
+        transform: translateX(-60%); 
+    }
+}
+
 
 /* END-ALL KEYWORDS ROW */
 
@@ -238,6 +259,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    
 }
 
 .quizCard-S{
@@ -245,6 +267,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     gap: 0.5rem; 
     border-bottom: 0.1px solid #f8f2de; 
     padding-bottom: 0.8rem;
+    
 }
 
 .quizCard-S img{
@@ -271,8 +294,10 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 .leaderBoardCommentSec{
     display: flex;
-    margin: 2.2rem 1rem 1.2rem 1rem;
+    margin: 2.2rem 1rem 0 1rem;
     gap: 1rem;
+    border-bottom: 0.001rem solid #f8f2de;
+    padding-bottom: 2.2rem;
 }
 
 .leaderBoard{
@@ -310,14 +335,56 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 .userPoints{
     display: flex;
-    background-color: #fcd24f;
-    border: 0.1rem solid white;
-    width: 80%;
+    background: linear-gradient(90deg, #D8B5FF 50%, #1EAE98 100%);
+    border: 0.09rem solid white;
+    border-radius: 0.8rem;
     padding: 0.3rem 0;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 0.5rem;
+    justify-content: space-evenly;    
+    
+}
+
+.wrapper{
+    width: 82%;
+    height: max-content;
+    position: relative;
+    z-index: 0;
+}
+
+@property --angle{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.wrapper::after, .wrapper::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 0%, #6A82FB, #FC5C7D,#d079c3, #6A82FB);
+    padding: 0.15rem;
+    z-index: -1;
+    border-radius: 0.9rem; 
+    animation: 4.8s spin linear infinite;
+}
+
+.wrapper::before{
+    filter: blur(0.8rem);
+    opacity: 0.8;
+}
+
+@keyframes spin {
+   from{
+        --angle: 0deg;
+   }
+   to{
+        --angle: 360deg;
+   }
 }
 
 .userIcon p{
@@ -337,12 +404,17 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 .userName{
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+    color: white;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
 }
 
 .pointsVal{
-    color: #d84040;
+    color: gold;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -358,7 +430,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-style: normal;
     font-size: 0.8rem;
     line-height: 0.6rem;
-    color: #ffffff;
+    color: rgb(216, 213, 213);
     text-align: center;
 }
 
@@ -376,8 +448,12 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    width: 14.5rem;
+    width: 14.3rem;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 2px black;
 }
 
 .writeComment p{
@@ -401,6 +477,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
+    
 }
 
 .writeComment input::placeholder{
@@ -460,9 +537,33 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 .sendIcon{
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 1.6rem;
+    height: 1.6rem;
     position: absolute;
+    right: 1rem;
+}
+
+.moreQuizes{
+    margin: 2.2rem 1rem 0 1rem;
+    position: relative;
+}
+
+.moreQuizes p{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 2.5rem;
+    color: white; 
+    text-transform: capitalize;
+    position: absolute;
+    left: 44%;
+    transform: translateX(-44%);
+}
+
+.quizTopicCard img{
+    width: 15rem;
+    height: 8rem;
 }
 
 /* END-LEADER BOARD & COMMENTS SECTION */
