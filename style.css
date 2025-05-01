@@ -61,7 +61,9 @@ html{
 }
 
 body{
-    background-color: #d84040;
+    /* background-color: rgb(143, 177, 228); */
+    /* background-color: rgb(176, 142, 203); */
+    background-color: black;
 }
 
 ul{
@@ -261,10 +263,6 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     line-height: 0.8rem;
 }
 
-.quizCard-S p:hover{
-    color: white;
-}
-
 .quizCard-M img{
     height: 9.5rem;
     width: 100%;
@@ -287,7 +285,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 .quizCard-S img:hover, .quizCard-L:hover, .quizCard-M:hover{
-    animation: zoom 0.6s ease;
+    animation: zoom 0.9s ease;
 }
 
 .userPoints:hover, .wrapper:hover{
@@ -311,6 +309,11 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     text-align: left;
     line-height: 0.9rem;
 }
+
+.quizCard-S p:hover, nav ul{
+    color: #FC5C7D;
+}
+
 
 /* END-HERO SECTION */
 
