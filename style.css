@@ -571,26 +571,100 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 .moreQuizes{
-    margin: 2.2rem 1rem 0 1rem;
-    position: relative;
+    margin: 2.2rem 1rem 0rem 1rem;
 }
 
-.moreQuizes p{
+.moreQuizes p:nth-child(1){
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: white; 
     text-transform: capitalize;
-    position: absolute;
-    left: 44%;
-    transform: translateX(-44%);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 2.2rem;
+}
+
+.moreQuizes p:nth-child(1):hover{
+    color: #FC5C7D;
 }
 
 .quizTopicCard img{
-    width: 15rem;
-    height: 8rem;
+    width: 100%;
+    height: 10rem;
+    border-bottom: #f8f2de 0.09rem solid;
+}
+
+.quizTopicCard{
+    background-color: #fcd24f;
+    border: #f8f2de 0.1rem solid;
+    padding-bottom: 1rem;
+    position: relative;
+    z-index: 0;
+    box-shadow: 8px 8px 0px #f8f2de;
+
+}
+
+.quizTopicCard:hover{
+    animation: zoom 0.8s ease;
+}
+
+.quizTopicCard:hover div{
+    background-color: #FC5C7D;
+    color: white;
+    border: white 0.1rem solid;
+}
+
+.quizTopicCard p:nth-of-type(1){
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: black; 
+    text-align: left; 
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.quizTopicCard p:nth-of-type(2){
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: black; 
+    text-align: left; 
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    
+}
+
+.quizTopicCard div{
+    background-color: #f8f2de;
+    padding: 0.55rem 1.2rem;
+    border: black 0.1rem solid;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -57%);
+    top: 57%;
+    left: 50%;
+    font-weight: 1000;
+}
+
+.moreQuizesGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.5rem;
 }
 
 /* END-LEADER BOARD & COMMENTS SECTION */
