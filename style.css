@@ -570,11 +570,11 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     right: 1rem;
 }
 
-.moreQuizes{
+.moreQuizes, .moreQuizes2{
     margin: 2.2rem 1rem 0rem 1rem;
 }
 
-.moreQuizes p:nth-child(1){
+.moreQuizes p:nth-child(1), .moreQuizes2 p:nth-child(1){
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
@@ -588,14 +588,18 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     margin-bottom: 2.2rem;
 }
 
-.moreQuizes p:nth-child(1):hover{
+.moreQuizes p:nth-child(1):hover, .moreQuizes2 p:nth-child(1):hover{
     color: #FC5C7D;
 }
 
-.quizTopicCard img{
+.moreQuizes .quizTopicCard img, .moreQuizes2 .quizTopicCard img{
     width: 100%;
-    height: 10rem;
+    height: 14rem;
     border-bottom: #f8f2de 0.09rem solid;
+}
+
+.moreQuizes2 .quizTopicCard img{
+    height: 10rem;
 }
 
 .quizTopicCard{
@@ -605,25 +609,18 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     position: relative;
     z-index: 0;
     box-shadow: 8px 8px 0px #f8f2de;
-
 }
 
 .quizTopicCard:hover{
     animation: zoom 0.8s ease;
 }
 
-.quizTopicCard:hover div{
-    background-color: #FC5C7D;
-    color: white;
-    border: white 0.1rem solid;
-}
-
-.quizTopicCard p:nth-of-type(1){
+.moreQuizes .quizTopicCard p:nth-of-type(1), .moreQuizes2 .quizTopicCard p:nth-of-type(1){
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 1000;
     font-style: normal;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: black; 
     text-align: left; 
     padding-left: 0.5rem;
@@ -632,10 +629,14 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     margin-bottom: 0.5rem;
 }
 
+.moreQuizes2 .quizTopicCard p:nth-of-type(1){
+    font-size: 1.2rem;
+}
+
 .quizTopicCard p:nth-of-type(2){
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 700;
     font-style: normal;
     font-size: 0.7rem;
     color: black; 
@@ -645,7 +646,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     
 }
 
-.quizTopicCard div{
+.moreQuizes .quizTopicCard div, .moreQuizes2 .quizTopicCard div{
     background-color: #f8f2de;
     padding: 0.55rem 1.2rem;
     border: black 0.1rem solid;
@@ -655,16 +656,34 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-optical-sizing: auto;
     position: absolute;
     z-index: 1;
-    transform: translate(-50%, -57%);
-    top: 57%;
+    transform: translate(-50%, -65%);
+    top: 65%;
     left: 50%;
+    white-space: nowrap;
     font-weight: 1000;
 }
 
-.moreQuizesGrid{
+.moreQuizes2 .quizTopicCard div{
+    transform: translate(-50%, -57%);
+    top: 57%;
+}
+
+.moreQuizes .quizTopicCard:hover div, .moreQuizes2 .quizTopicCard:hover div{
+    background-color: #FC5C7D;
+    color: white;
+    border: white 0.1rem solid;
+}
+
+.moreQuizes .moreQuizesGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: 1.5rem;
+}
+
+.moreQuizes2 .moreQuizesGrid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 /* END-LEADER BOARD & COMMENTS SECTION */
