@@ -397,7 +397,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 0%, #6A82FB, #FC5C7D,#d079c3, #6A82FB);
+    background-image: conic-gradient(from var(--angle), transparent 0%, #db41af, #4478d0, #db41af);
     padding: 0.15rem;
     z-index: -1;
     border-radius: 0.9rem; 
