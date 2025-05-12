@@ -169,8 +169,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }    
 
 .marquee{
-    animation: scroll 45s linear infinite;
-    
+    animation: scroll 45s linear infinite; 
 }
 
 @keyframes scroll {
@@ -336,7 +335,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     padding: 1.5rem;
     border: 0.1rem solid white;
     gap: 1.2rem;
-    box-shadow: 0px 0px 35px white;
+    box-shadow: 0px 0px 2.188rem white;
     border-radius: 0.6rem;
     animation: bgEffect 10s ease infinite;
     background-size: 600% 600%;
@@ -353,7 +352,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     gap: 0.8rem;
     border: 0.1rem solid white;
     border-radius: 0.6rem; 
-    box-shadow: 0px 0px 35px white;
+    box-shadow: 0px 0px 2.188rem white;
     animation: bgEffect 10s ease infinite;
     background-size: 600% 600%;
 }
@@ -647,7 +646,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     padding-bottom: 1rem;
     position: relative;
     z-index: 0;
-    box-shadow: 0 0px 15px #f8f2de;
+    box-shadow: 0 0px 0.938rem #f8f2de;
     border-radius: 1rem;
 }
 
@@ -702,7 +701,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     left: 50%;
     white-space: nowrap;
     font-weight: 1000;
-    box-shadow: 0 0px 15px #f8f2de;
+    box-shadow: 0 0px 0.938rem #f8f2de;
 }
 
 .moreQuizes2 .quizTopicCard div{
@@ -734,10 +733,14 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 /* login.html */
 
+/* START - LOGINSEC */
+
+    .loginBody{
+                background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
+    }
+
     .loginSec{
-        width: 100vw;
-        height: 100vh;
-        background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
+        margin: 2rem 0rem;
         animation: bgEffect 10s ease infinite;
         background-size: 600% 600%;
         display: flex;
@@ -754,7 +757,8 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         font-size: 3.5rem;
         color: white; 
         text-transform: uppercase;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.1rem;
+        text-shadow: 5px 5px 0px rgb(52, 51, 51);
     }
 
     .loginSec input{
@@ -774,6 +778,25 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         color: white;
     }
 
+    .loginSec input:focus{
+        all: unset;
+        width: 26rem;
+        padding: 0.6rem;
+        padding-left: 1.8rem;
+        background-color:transparent;
+        border: 0.17rem solid rgb(205, 201, 201);
+        border-radius: 2rem;
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        box-shadow: 0px 0px 2.5rem white;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.2rem;
+        margin: 0.6rem 0;
+        color: white;
+    }
+
+
     .loginSec input::placeholder{
         color: white;
         font-family: "Red Hat Display", sans-serif;
@@ -783,9 +806,20 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         font-size: 1rem;
     }
 
+    .loginSec .inputParent{
+        position: relative;
+    }
+
+    .loginSec .inputParent i{
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .loginSec div:nth-child(1){
         width: 35rem;
-        padding: 5rem;
+        padding: 2rem 1rem;
         background-color: transparent;
         border: 0.15rem solid rgba(177, 149, 149, 0.2);
         border-radius: 1rem;
@@ -794,27 +828,82 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         align-items: center;
         flex-direction: column;
         backdrop-filter: blur(10rem);
-        box-shadow: 0px 0px 35px white;
+        box-shadow: 0px 0px 2.188rem white;
+        position: relative;
+    }
+
+    .loginSec div:nth-child(1):hover{
+        box-shadow: 0px 0px 4.063rem white;
+        border: 0.3rem solid rgba(177, 149, 149, 0.2);
     }
 
     .loginSec button{
         width: 12rem;
         padding: 0.5rem;
-        background-color: transparent;
-        
-
-
+        background-color: #9f78cb;
         text-transform: uppercase;
-        border: none;
+        border: 0.08rem solid white;
         border-radius: 2rem;
         font-family: "Red Hat Display", sans-serif;
         font-optical-sizing: auto;
         font-weight: 800;
         font-style: normal;
-        font-size: 1.2rem;
-        margin-top: 1rem;
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
         color: white;
+        box-shadow: 4px 4px 0.625rem black,
+                    0px 0px 1.875rem white;
+        text-shadow: 0px 0px 1px white;                    
     }
+
+    .loginSec a{
+        text-decoration: none;
+        color: white;
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        font-size: 0.8rem; 
+    }
+    
+    .loginSec .icons{
+        display: flex;
+        gap: 1.2rem;
+        margin: 0.5rem;
+    }
+
+    .loginSec a:nth-of-type(1){
+        position: absolute;
+        top: 68%;
+        left: 69%;
+    }
+
+    .loginSec .icons i{
+        cursor: pointer;
+        padding: 0.9rem 0.4rem;
+        border: 1px solid whitesmoke;
+        border-radius: 0.3rem ;
+        box-shadow: 0px 0px 0.625rem white;
+    }
+
+    .loginSec .icons i:hover{
+        background-color: #9f78cb;
+        color: white;
+        box-shadow: 0px 0px 1.875rem white;
+    }
+
+    .loginSec:nth-of-type(2) button{
+        margin-top: 0.5rem;  
+    }
+
+    .loginSec:nth-of-type(2){
+        display: none;
+    }
+
+    
+
+/* END - LOGINSEC */
 
 /* login.html */
 
