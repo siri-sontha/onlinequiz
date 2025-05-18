@@ -17,12 +17,12 @@
   } */
 
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-  
+
   /* .bellota-regular-FontFamily3{
     font-family: "Bellota", system-ui;
     font-weight: 400;
     font-style: normal;
-  } */  
+  } */
 
 *{
     margin: 0;
@@ -77,14 +77,16 @@ a{
 /* START-NAVIGATION BAR */
 
 nav{
-    padding: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid goldenrod;
+    box-shadow: 0px 0px 0.25rem gold;
 }
 
 nav a{
-    color: #f8f2de
+    color: #f8f2de;
 }
 
 nav ul{
@@ -97,17 +99,21 @@ nav ul{
     font-size: 1rem;
 }
 
-nav ul:nth-of-type(1) li a{
+nav ul li:nth-of-type(1){
     font-family: "Bellota", system-ui;
     font-weight: bolder;
     font-style: normal;
     color: #fcd24f;
-    font-size: 2rem;   
-} 
+    font-size: 1.5rem;
+}
 
-nav ul:nth-of-type(2) li:nth-of-type(2){
-    border-right: 0.08rem solid #f8f2de;
-    padding:0 1.2rem;
+nav i{
+    font-size: 0.8rem;
+    background-color: rgb(65, 65, 65);
+    padding: 0.35rem 0.45rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0.5rem white;
+    border: 1px solid white;
 }
 
 #screenToggle{
@@ -138,7 +144,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 0.4rem;
+    margin-top: 0.8rem;
 }
 
 .line{
@@ -165,18 +171,18 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 .keyWordBlock:hover{
     background-color: #FC5C7D;
     color: #f8f2de;
-}    
+}
 
 .marquee{
-    animation: scroll 45s linear infinite; 
+    animation: scroll 45s linear infinite;
 }
 
 @keyframes scroll {
-    0% { 
-        transform: translateX(60%); 
+    0% {
+        transform: translateX(60%);
     }
-    100% { 
-        transform: translateX(-60%); 
+    100% {
+        transform: translateX(-60%);
     }
 }
 
@@ -201,10 +207,10 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 @keyframes zoom {
-    0% { 
+    0% {
         transform: scale(1);
     }
-    
+
     100% {
         transform: scale(1.04);
     }
@@ -223,7 +229,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-style: normal;
     font-size: 1.4rem;
     color: black;
-    text-align: center; 
+    text-align: center;
 }
 
 .mediumQuizCardsDiv{
@@ -271,12 +277,12 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
-    
+
 }
 
 .quizCard-S{
     display: flex;
-    gap: 0.5rem; 
+    gap: 0.5rem;
     padding: 0 0.44rem;
     border-bottom: 0.001rem solid #f8f2de;
     padding-bottom: 0.94rem;
@@ -319,41 +325,11 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
 .leaderBoardCommentSec{
     display: flex;
-    margin: 2.2rem 1rem 0 1rem;
-    gap: 2rem;
+    margin: 2.2rem 0.8rem 0 0.8rem;
+    padding: 1.2rem 0;
+    gap: 1rem;
     border-bottom: 0.001rem solid #f8f2de;
-    padding-bottom: 2.2rem;
-}
-
-.leaderBoard{
-    background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
-    width: 66%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    border: 0.1rem solid white;
-    gap: 1.2rem;
-    box-shadow: 0px 0px 1.2rem white;
-    border-radius: 0.6rem;
-    animation: bgEffect 10s ease infinite;
-    background-size: 600% 600%;
-}
-
-.comments{
-    width: 33%;
-    background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
-    border: 0.1rem solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-    gap: 0.8rem;
-    border: 0.1rem solid white;
-    border-radius: 0.6rem; 
-    box-shadow: 0px 0px 1.2rem white;
-    animation: bgEffect 10s ease infinite;
-    background-size: 600% 600%;
+    margin-bottom: 2.2rem;
 }
 
 .divTitle{
@@ -362,26 +338,43 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 1000;
     font-style: normal;
     font-size: 3rem;
-    color: white; 
+    color: white;
     text-transform: capitalize;
-    margin-bottom: 0.6rem;
-    
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+
+.leaderBoard{
+    background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
+    width: 70%;
+    align-items: center;
+    padding: 2rem 1rem;
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+    animation: bgEffect 10s ease infinite;
+    background-size: 600% 600%;
+}
+
+.leaderBoardGrid{
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: 1fr 1fr;
 }
 
 .userPoints{
     display: flex;
     background: linear-gradient(90deg, #D8B5FF 50%, #1EAE98 100%);
-    border: 0.15rem solid rgb(241, 241, 56);
+    border: 0.1rem solid rgb(241, 241, 56);
     border-radius: 0.8rem;
-    padding: 0.3rem 0;
+    padding: 0.3rem 0rem;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;       
+    justify-content: space-evenly;
 }
 
 .wrapper{
-    width: 82%;
-    height: max-content;
+    width: 18rem;
     position: relative;
     z-index: 0;
 }
@@ -400,11 +393,10 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    /* background-image: conic-gradient(from var(--angle), transparent 0%, #db41af, #4478d0, #db41af); */
     background-image: conic-gradient(from var(--angle), transparent 0%, #8ad1f2, #06a7f3, #8ad1f2);
-    padding: 0.15rem;
+    padding: 0.14rem;
     z-index: -1;
-    border-radius: 0.9rem; 
+    border-radius: 0.9rem;
     animation: 5s spin linear infinite;
 }
 
@@ -423,10 +415,10 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 }
 
 .userIcon p{
-    height: 2.2rem;
-    width: 2.2rem;
-    border-radius: 0.6rem;
-    border: 0.1rem solid white;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 0.4rem;
+    border: 0.068rem solid white;
     background-color: #c076b9;
     display: flex;
     justify-content: center;
@@ -434,15 +426,17 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     color: white;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 900;
-    font-size: 1.4rem;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 2px 2px 3px rgb(58, 56, 56);
 }
 
 .userName{
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-style: italic;
+    font-weight: 1000;
     color: white;
     font-weight: 900;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
@@ -454,7 +448,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.28rem;
 }
 
@@ -463,10 +457,39 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-optical-sizing: auto;
     font-weight: 1000;
     font-style: normal;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     line-height: 0.6rem;
     color: rgb(216, 213, 213);
     text-align: center;
+}
+
+.leaderBoardGrid button{
+    border-radius: 0.8rem;
+    padding: 0.6rem 0rem;
+    background-color: #fcd24f;
+    color: #D32F2F;
+    font-size: 1rem;
+    border: 2px solid rgb(107, 104, 104);
+    box-shadow: 4px 4px 0rem rgb(107, 104, 104);
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.comments{
+    width: 30%;
+    background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
+    border: 0.04rem solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 0.8rem;
+    border: 0.1rem solid white;
+    border-radius: 0.6rem;
+    animation: bgEffect 10s ease infinite;
+    background-size: 600% 600%;
 }
 
 .comment{
@@ -497,7 +520,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 800;
     font-style: normal;
     font-size: 2rem;
-    color: black; 
+    color: black;
     text-transform: capitalize;
 }
 
@@ -512,7 +535,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
-    
+
 }
 
 .writeComment input::placeholder{
@@ -522,7 +545,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 500;
     font-style: normal;
     font-size: 0.7rem;
-    
+
 }
 
 .comment .userIconId, .writeComment .userIconId{
@@ -560,7 +583,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     top: 50%;
     transform: translateY(-50%);
     left: 1rem;
-    
+
 }
 
 .writeComment .userNameComment{
@@ -602,7 +625,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 1000;
     font-style: normal;
     font-size: 2.2rem;
-    color: white; 
+    color: white;
     text-transform: capitalize;
     display: flex;
     justify-content: left;
@@ -647,8 +670,8 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 1000;
     font-style: normal;
     font-size: 1.5rem;
-    color: black; 
-    text-align: left; 
+    color: black;
+    text-align: left;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     padding: 1rem 0.5rem 0rem 0.5rem;
@@ -665,11 +688,11 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     font-weight: 700;
     font-style: normal;
     font-size: 0.7rem;
-    color: black; 
-    text-align: left; 
+    color: black;
+    text-align: left;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
-    
+
 }
 
 .moreQuizes .quizTopicCard div, .moreQuizes2 .quizTopicCard div{
@@ -742,20 +765,20 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
 
     .loginSec{
         margin: 2rem 0rem;
-        
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    
+
     .loginSec h1{
         font-family: "Red Hat Display", sans-serif;
         font-optical-sizing: auto;
         font-weight: 1000;
         font-style: normal;
         font-size: 3.5rem;
-        color: white; 
+        color: white;
         text-transform: uppercase;
         margin-bottom: 0.1rem;
         text-shadow: 5px 5px 0px rgb(52, 51, 51);
@@ -854,7 +877,7 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         color: white;
         box-shadow: 4px 4px 0.625rem black,
                     0px 0px 1.875rem white;
-        text-shadow: 0px 0px 1px white;                    
+        text-shadow: 0px 0px 1px white;
     }
 
     .loginSec a{
@@ -864,9 +887,9 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
         font-optical-sizing: auto;
         font-weight: 800;
         font-style: normal;
-        font-size: 0.8rem; 
+        font-size: 0.8rem;
     }
-    
+
     .loginSec .icons{
         display: flex;
         gap: 1.2rem;
@@ -894,16 +917,16 @@ nav ul:nth-of-type(2) li:nth-of-type(2){
     }
 
     .loginSec:nth-of-type(2) button{
-        margin-top: 0.5rem;  
+        margin-top: 0.5rem;
     }
 
     .loginSec:nth-of-type(2){
         display: none;
     }
 
-    
 
-    
+
+
 
 /* END - LOGINSEC */
 
