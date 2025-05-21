@@ -212,7 +212,7 @@ nav i{
     }
 
     100% {
-        transform: scale(1.04);
+        transform: scale(1.02);
     }
 }
 
@@ -641,26 +641,35 @@ nav i{
     width: 100%;
     height: 15rem;
     border-bottom: #f8f2de 0.09rem solid;
-    border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
 }
 
 .moreQuizes2 .quizTopicCard img{
     height: 10rem
 }
 
+.quizTopicCard:hover img{
+    animation: zoom 0.8s ease;
+}
+
 .quizTopicCard{
     background-color: #fcd24f;
-    border: white 0.05rem solid;
+    border: white 0.08rem solid;
     padding-bottom: 1rem;
     position: relative;
     z-index: 0;
-    box-shadow: 0 0px 0.7rem #f8f2de;
-    border-radius: 0.7rem;
+    border-radius: 0.6rem;
 }
 
 .quizTopicCard:hover{
     animation: zoom 0.8s ease;
+    box-shadow: 0 0px 0.8rem #f8f2de;
+    overflow: hidden;
+}
+
+.moreQuizes2 .quizTopicCard{
+    padding-bottom: 0.65rem;
 }
 
 .moreQuizes .quizTopicCard p:nth-of-type(1), .moreQuizes2 .quizTopicCard p:nth-of-type(1){
@@ -721,13 +730,13 @@ nav i{
 .moreQuizes2 .quizTopicCard div{
     font-size: 1rem;
     border-radius: 0.8rem;
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.65rem;
     transform: translate(-50%, -57%);
     top: 57%;
 }
 
 .moreQuizes .quizTopicCard:hover div, .moreQuizes2 .quizTopicCard:hover div{
-    background-color: #9f78cb;
+    background-color: #435fac;
     color: white;
     border: white 0.1rem solid;
 }
