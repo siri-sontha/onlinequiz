@@ -708,7 +708,7 @@ nav i{
 }
 
 .moreQuizes .quizTopicCard div, .moreQuizes2 .quizTopicCard div{
-    background-color: #FC5C7D;
+    background-color: #f04265;
     padding: 0.55rem 1.2rem;
     border: white 0.1rem solid;
     color: white;
@@ -736,7 +736,7 @@ nav i{
 }
 
 .moreQuizes .quizTopicCard:hover div, .moreQuizes2 .quizTopicCard:hover div{
-    background-color: #435fac;
+    background-color: #1698c7;
     color: white;
     border: white 0.1rem solid;
 }
@@ -781,7 +781,6 @@ nav i{
 
     .loginSec{
         margin: 2rem 0rem;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
