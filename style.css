@@ -9,7 +9,7 @@
     font-style: normal;
   } */
 
-  /* .montserrat-FontFamily2{ Canva Sans Replacement
+/* .montserrat-FontFamily2{ Canva Sans Replacement
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -18,57 +18,95 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-  /* .bellota-regular-FontFamily3{
+/* .bellota-regular-FontFamily3{
     font-family: "Bellota", system-ui;
     font-weight: 400;
     font-style: normal;
   } */
 
-*{
+/* START - UTILITY CLASSES */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap-1 {
+    gap: 0.3rem;
+}
+
+.gap-half {
+    gap: 0.32rem;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.center {
+    text-align: center;
+}
+
+.vertical-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+/* END -  UTILITY CLASSES */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 24px;
 }
 
-@media screen and (max-width: 62em){
-    html{
+@media screen and (max-width: 62em) {
+    html {
         font-size: 20px;
     }
 }
 
-@media screen and (max-width: 48em){
-    html{
+@media screen and (max-width: 48em) {
+    html {
         font-size: 12px;
     }
 }
 
-@media screen and (max-width: 36em){
-    html{
+@media screen and (max-width: 36em) {
+    html {
         font-size: 7px;
     }
 }
 
-.container{
-    position: relative; /* or 'relative' or 'fixed', depending on your layout */
+.container {
+    position: relative;
+    /* or 'relative' or 'fixed', depending on your layout */
     max-width: 1400px;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
 }
 
-body{
+body {
     background-color: black;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -76,20 +114,21 @@ a{
 
 /* START-NAVIGATION BAR */
 
-nav{
+nav {
     padding: 0.6rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid goldenrod;
     box-shadow: 0px 0px 0.25rem gold;
+    margin-bottom: 1rem;
 }
 
-nav a{
+nav a {
     color: #f8f2de;
 }
 
-nav ul{
+nav ul {
     display: flex;
     gap: 1rem;
     font-family: "Red Hat Display", sans-serif;
@@ -99,7 +138,7 @@ nav ul{
     font-size: 1rem;
 }
 
-nav ul li:nth-of-type(1){
+nav ul li:nth-of-type(1) {
     font-family: "Bellota", system-ui;
     font-weight: bolder;
     font-style: normal;
@@ -107,7 +146,7 @@ nav ul li:nth-of-type(1){
     font-size: 1.5rem;
 }
 
-nav i{
+nav i {
     font-size: 0.8rem;
     background-color: rgb(65, 65, 65);
     padding: 0.35rem 0.45rem;
@@ -116,7 +155,7 @@ nav i{
     border: 1px solid white;
 }
 
-#screenToggle{
+#screenToggle {
     height: 1.4rem;
     width: 3rem;
     background-color: black;
@@ -124,7 +163,7 @@ nav i{
     position: relative;
 }
 
-#whiteCircle{
+#whiteCircle {
     height: 1rem;
     width: 1rem;
     background-color: white;
@@ -139,21 +178,20 @@ nav i{
 
 /* START-ALL KEYWORDS ROW */
 
-.keyWordsDiv{
+.keyWordsDiv {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    margin-top: 0.8rem;
 }
 
-.line{
+.line {
     width: 100%;
     height: 0.001rem;
     background-color: white;
 }
 
-.keyWordBlock{
+.keyWordBlock {
     background-color: #fcd24f;
     padding: 0.3rem 0.6rem;
     border: 0.14rem solid #f8f2de;
@@ -168,12 +206,12 @@ nav i{
     text-align: center;
 }
 
-.keyWordBlock:hover{
+.keyWordBlock:hover {
     background-color: #FC5C7D;
     color: #f8f2de;
 }
 
-.marquee{
+.marquee {
     animation: scroll 45s linear infinite;
 }
 
@@ -181,6 +219,7 @@ nav i{
     0% {
         transform: translateX(60%);
     }
+
     100% {
         transform: translateX(-60%);
     }
@@ -190,14 +229,14 @@ nav i{
 
 /* START-HERO SECTION */
 
-.heroSec{
+.heroSec {
     margin: 1.2rem 1rem 1.2rem 1rem;
     display: grid;
     grid-template-columns: 4.5fr 2fr;
     gap: 1.2rem;
 }
 
-.quizCard-L{
+.quizCard-L {
     background-color: #fcd24f;
     height: 22.5rem;
     border: 0.1rem solid #f8f2de;
@@ -216,13 +255,13 @@ nav i{
     }
 }
 
-.quizCard-L img{
+.quizCard-L img {
     height: 19.5rem;
     width: 100%;
     border: 0.001rem solid #f8f2de;
 }
 
-.quizCard-L p{
+.quizCard-L p {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -232,12 +271,12 @@ nav i{
     text-align: center;
 }
 
-.mediumQuizCardsDiv{
+.mediumQuizCardsDiv {
     display: flex;
     gap: 1.2rem;
 }
 
-.quizCard-M{
+.quizCard-M {
     background-color: #fcd24f;
     height: 15.8rem;
     border: 0.1rem solid #f8f2de;
@@ -248,7 +287,7 @@ nav i{
     box-shadow: 2px 2px 0.8rem white;
 }
 
-.quizCard-M p:nth-of-type(1){
+.quizCard-M p:nth-of-type(1) {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -258,7 +297,7 @@ nav i{
     margin-bottom: 0.28rem;
 }
 
-.quizCard-M p:nth-of-type(2){
+.quizCard-M p:nth-of-type(2) {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -267,20 +306,20 @@ nav i{
     line-height: 0.8rem;
 }
 
-.quizCard-M img{
+.quizCard-M img {
     height: 9.5rem;
     width: 100%;
     border: 0.1rem solid #f8f2de;
 }
 
-.smallQuizCardsDiv{
+.smallQuizCardsDiv {
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
 
 }
 
-.quizCard-S{
+.quizCard-S {
     display: flex;
     gap: 0.5rem;
     padding: 0 0.44rem;
@@ -288,22 +327,25 @@ nav i{
     padding-bottom: 0.94rem;
 }
 
-.quizCard-S img:hover, .quizCard-L:hover, .quizCard-M:hover{
+.quizCard-S img:hover,
+.quizCard-L:hover,
+.quizCard-M:hover {
     animation: zoom 0.9s ease;
 }
 
-.userPoints:hover, .wrapper:hover{
+.userPoints:hover,
+.wrapper:hover {
     animation: zoom 0.6s ease;
 }
 
-.quizCard-S img{
+.quizCard-S img {
     width: 5.8rem;
     height: 3.2rem;
     border: 0.06rem solid #f8f2de;
     box-shadow: 1px 1px 0.4rem white;
 }
 
-.quizCard-S p{
+.quizCard-S p {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -314,7 +356,8 @@ nav i{
     line-height: 0.9rem;
 }
 
-.quizCard-S p:hover, nav ul{
+.quizCard-S p:hover,
+nav ul {
     color: #FC5C7D;
 }
 
@@ -323,7 +366,7 @@ nav i{
 
 /* START-LEADER BOARD & COMMENTS SECTION */
 
-.leaderBoardCommentSec{
+.leaderBoardCommentSec {
     display: flex;
     margin: 2.2rem 0.8rem 0 0.8rem;
     padding: 1rem 0;
@@ -331,7 +374,7 @@ nav i{
     margin-bottom: 1.8rem;
 }
 
-.divTitle{
+.divTitle {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
@@ -344,7 +387,7 @@ nav i{
 
 }
 
-.leaderBoard{
+.leaderBoard {
     background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
     width: 70%;
     align-items: center;
@@ -355,13 +398,13 @@ nav i{
     background-size: 600% 600%;
 }
 
-.leaderBoardGrid{
+.leaderBoardGrid {
     display: grid;
     gap: 1.2rem;
     grid-template-columns: 1fr 1fr;
 }
 
-.userPoints{
+.userPoints {
     display: flex;
     background: linear-gradient(90deg, #D8B5FF 50%, #1EAE98 100%);
     border: 0.1rem solid rgb(241, 241, 56);
@@ -372,19 +415,20 @@ nav i{
     justify-content: space-evenly;
 }
 
-.wrapper{
+.wrapper {
     width: 18rem;
     position: relative;
     z-index: 0;
 }
 
-@property --angle{
+@property --angle {
     syntax: '<angle>';
     inherits: false;
     initial-value: 80deg;
 }
 
-.wrapper::after, .wrapper::before{
+.wrapper::after,
+.wrapper::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -399,21 +443,22 @@ nav i{
     animation: 5s spin linear infinite;
 }
 
-.wrapper::before{
+.wrapper::before {
     filter: blur(0.8rem);
     opacity: 0.8;
 }
 
 @keyframes spin {
-   from{
+    from {
         --angle: 0deg;
-   }
-   to{
+    }
+
+    to {
         --angle: 360deg;
-   }
+    }
 }
 
-.userIcon p{
+.userIcon p {
     height: 1.6rem;
     width: 1.6rem;
     border-radius: 0.4rem;
@@ -430,7 +475,7 @@ nav i{
     box-shadow: 2px 2px 3px rgb(58, 56, 56);
 }
 
-.userName{
+.userName {
     font-size: 1rem;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
@@ -438,10 +483,10 @@ nav i{
     font-weight: 1000;
     color: white;
     font-weight: 900;
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px  1px 0 black, 1px  1px 0 black;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-.pointsVal{
+.pointsVal {
     color: gold;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
@@ -451,7 +496,7 @@ nav i{
     line-height: 1.28rem;
 }
 
-.pointsWord{
+.pointsWord {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
@@ -462,7 +507,7 @@ nav i{
     text-align: center;
 }
 
-.leaderBoardGrid button{
+.leaderBoardGrid button {
     border-radius: 0.8rem;
     padding: 0.6rem 0rem;
     background-color: #fcd24f;
@@ -476,7 +521,7 @@ nav i{
     font-style: normal;
 }
 
-.comments{
+.comments {
     width: 30%;
     background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
     border: 0.04rem solid white;
@@ -491,7 +536,7 @@ nav i{
     background-size: 600% 600%;
 }
 
-.comment{
+.comment {
     background-color: #fcd24f;
     padding: 0.4rem 0.5rem;
     border: 0.05rem solid white;
@@ -500,7 +545,7 @@ nav i{
 }
 
 
-.writeComment{
+.writeComment {
     padding: 0.4rem;
     background-color: #fcd24f;
     border: 0.001rem solid black;
@@ -514,7 +559,7 @@ nav i{
     box-shadow: 4px 4px 2px rgb(68, 68, 68);
 }
 
-.writeComment p{
+.writeComment p {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -524,7 +569,7 @@ nav i{
     text-transform: capitalize;
 }
 
-.writeComment input{
+.writeComment input {
     width: 100%;
     padding: 0.4rem;
     padding-left: 1.8rem;
@@ -537,7 +582,7 @@ nav i{
     font-size: 0.6rem;
 }
 
-.writeComment input::placeholder{
+.writeComment input::placeholder {
     color: #000000;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
@@ -547,12 +592,14 @@ nav i{
 
 }
 
-.comment .userIconId, .writeComment .userIconId{
+.comment .userIconId,
+.writeComment .userIconId {
     display: flex;
     gap: 0.5rem;
 }
 
-.comment .userIconComment, .writeComment .userIconComment{
+.comment .userIconComment,
+.writeComment .userIconComment {
     background-color: #c076b9;
     height: 1.1rem;
     width: 1.1rem;
@@ -568,7 +615,7 @@ nav i{
     font-size: 0.8rem;
 }
 
-.comment .userNameComment{
+.comment .userNameComment {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -577,7 +624,7 @@ nav i{
     color: black;
 }
 
-.writeComment .userIconId{
+.writeComment .userIconId {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -585,7 +632,7 @@ nav i{
 
 }
 
-.writeComment .userNameComment{
+.writeComment .userNameComment {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -594,7 +641,7 @@ nav i{
     color: black;
 }
 
-.commentText{
+.commentText {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -603,7 +650,7 @@ nav i{
     color: black;
 }
 
-.sendIcon{
+.sendIcon {
     width: 1.6rem;
     height: 1.6rem;
     position: absolute;
@@ -614,11 +661,13 @@ nav i{
 
 /* START - MOREQUIZES & MOREQUIZES2 */
 
-.moreQuizes, .moreQuizes2{
+.moreQuizes,
+.moreQuizes2 {
     margin: 2.2rem 1rem 0rem 1rem;
 }
 
-.moreQuizes p:nth-child(1), .moreQuizes2 p:nth-child(1){
+.moreQuizes p:nth-child(1),
+.moreQuizes2 p:nth-child(1) {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
@@ -633,11 +682,13 @@ nav i{
 
 }
 
-.moreQuizes p:nth-child(1):hover, .moreQuizes2 p:nth-child(1):hover{
+.moreQuizes p:nth-child(1):hover,
+.moreQuizes2 p:nth-child(1):hover {
     color: #FC5C7D;
 }
 
-.moreQuizes .quizTopicCard img, .moreQuizes2 .quizTopicCard img{
+.moreQuizes .quizTopicCard img,
+.moreQuizes2 .quizTopicCard img {
     width: 100%;
     height: 15rem;
     border-bottom: #f8f2de 0.09rem solid;
@@ -645,15 +696,15 @@ nav i{
     border-top-right-radius: 0.6rem;
 }
 
-.moreQuizes2 .quizTopicCard img{
+.moreQuizes2 .quizTopicCard img {
     height: 10rem
 }
 
-.quizTopicCard:hover img{
+.quizTopicCard:hover img {
     animation: zoom 0.8s ease;
 }
 
-.quizTopicCard{
+.quizTopicCard {
     background-color: #fcd24f;
     border: white 0.08rem solid;
     padding-bottom: 1rem;
@@ -662,17 +713,18 @@ nav i{
     border-radius: 0.6rem;
 }
 
-.quizTopicCard:hover{
+.quizTopicCard:hover {
     animation: zoom 0.8s ease;
     box-shadow: 0 0px 0.8rem #f8f2de;
     overflow: hidden;
 }
 
-.moreQuizes2 .quizTopicCard{
+.moreQuizes2 .quizTopicCard {
     padding-bottom: 0.65rem;
 }
 
-.moreQuizes .quizTopicCard p:nth-of-type(1), .moreQuizes2 .quizTopicCard p:nth-of-type(1){
+.moreQuizes .quizTopicCard p:nth-of-type(1),
+.moreQuizes2 .quizTopicCard p:nth-of-type(1) {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 1000;
@@ -686,11 +738,12 @@ nav i{
     margin-bottom: 0.5rem;
 }
 
-.moreQuizes2 .quizTopicCard p:nth-of-type(1){
+.moreQuizes2 .quizTopicCard p:nth-of-type(1) {
     font-size: 1rem;
 }
 
-.moreQuizes .quizTopicCard p:nth-of-type(2), .moreQuizes2 .quizTopicCard p:nth-of-type(2){
+.moreQuizes .quizTopicCard p:nth-of-type(2),
+.moreQuizes2 .quizTopicCard p:nth-of-type(2) {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -703,11 +756,12 @@ nav i{
 
 }
 
-.moreQuizes2 .quizTopicCard p:nth-of-type(2){
+.moreQuizes2 .quizTopicCard p:nth-of-type(2) {
     font-size: 0.65rem;
 }
 
-.moreQuizes .quizTopicCard div, .moreQuizes2 .quizTopicCard div{
+.moreQuizes .quizTopicCard div,
+.moreQuizes2 .quizTopicCard div {
     background-color: #f04265;
     padding: 0.55rem 1.2rem;
     border: white 0.1rem solid;
@@ -727,7 +781,7 @@ nav i{
     box-shadow: 0 0px 0.9rem #f8f2de;
 }
 
-.moreQuizes2 .quizTopicCard div{
+.moreQuizes2 .quizTopicCard div {
     font-size: 1rem;
     border-radius: 0.8rem;
     padding: 0.35rem 0.65rem;
@@ -735,19 +789,20 @@ nav i{
     top: 57%;
 }
 
-.moreQuizes .quizTopicCard:hover div, .moreQuizes2 .quizTopicCard:hover div{
+.moreQuizes .quizTopicCard:hover div,
+.moreQuizes2 .quizTopicCard:hover div {
     background-color: #1698c7;
     color: white;
     border: white 0.1rem solid;
 }
 
-.moreQuizes .moreQuizesGrid{
+.moreQuizes .moreQuizesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     gap: 1.99rem;
 }
 
-.moreQuizes2 .moreQuizesGrid{
+.moreQuizes2 .moreQuizesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: 1.5rem;
@@ -759,192 +814,287 @@ nav i{
 
 /* login.html */
 
-/* START - LOGINSEC */
+.loginBody {
+    background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
+    animation: bgEffect 10s ease infinite;
+    background-size: 600% 600%;
+}
 
-    .loginBody{
-        background: linear-gradient(90deg, rgba(203, 115, 212, 1) 1%, rgba(0, 188, 212, 1) 35%, rgba(0, 198, 255, 1) 53%, rgba(134, 188, 242, 1) 72%, rgba(203, 115, 212, 1) 100%);
-        animation: bgEffect 10s ease infinite;
-        background-size: 600% 600%;
-    }
-
-    @keyframes bgEffect {
+@keyframes bgEffect {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
-    }
+}
 
-    .loginSec{
-        margin: 2rem 0rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.loginSec {
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    .loginSec h1{
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 1000;
-        font-style: normal;
-        font-size: 3.5rem;
-        color: white;
-        text-transform: uppercase;
-        margin-bottom: 0.1rem;
-        text-shadow: 5px 5px 0px rgb(52, 51, 51);
-    }
+.loginSec h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+    text-shadow: 5px 5px 0px rgb(52, 51, 51);
+}
 
-    .loginSec input{
-        width: 28rem;
-        padding: 0.6rem;
-        padding-left: 1.8rem;
-        background-color:transparent;
-        border: 0.15rem solid rgb(205, 201, 201);
-        border-radius: 2rem;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        box-shadow: 0px 0px 8px white;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.2rem;
-        margin: 0.6rem 0;
-        color: white;
-    }
+.loginSec input {
+    width: 28rem;
+    padding: 0.6rem;
+    padding-left: 1.8rem;
+    background-color: transparent;
+    border: 0.15rem solid rgb(205, 201, 201);
+    border-radius: 2rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    box-shadow: 0px 0px 8px white;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 0.6rem 0;
+    color: white;
+}
 
-    .loginSec input:focus{
-        all: unset;
-        width: 26rem;
-        padding: 0.6rem;
-        padding-left: 1.8rem;
-        background-color:transparent;
-        border: 0.17rem solid rgb(205, 201, 201);
-        border-radius: 2rem;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        box-shadow: 0px 0px 2.5rem white;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 1.2rem;
-        margin: 0.6rem 0;
-        color: white;
-    }
-
-
-    .loginSec input::placeholder{
-        color: white;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 1rem;
-    }
-
-    .loginSec .inputParent{
-        position: relative;
-    }
-
-    .loginSec .inputParent i{
-        position: absolute;
-        right: 2rem;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .loginSec div:nth-child(1){
-        width: 35rem;
-        padding: 2rem 1rem;
-        background-color: transparent;
-        border: 0.15rem solid rgba(177, 149, 149, 0.2);
-        border-radius: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        backdrop-filter: blur(10rem);
-        box-shadow: 0px 0px 2.188rem white;
-        position: relative;
-    }
-
-    .loginSec div:nth-child(1):hover{
-        box-shadow: 0px 0px 4rem white;
-        border: 0.05rem solid rgba(177, 149, 149, 0.2);
-    }
-
-    .loginSec button{
-        width: 12rem;
-        padding: 0.5rem;
-        background-color: #9f78cb;
-        text-transform: uppercase;
-        border: 0.08rem solid white;
-        border-radius: 2rem;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-size: 1.4rem;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
-        color: white;
-        box-shadow: 4px 4px 0.625rem black,
-                    0px 0px 1.875rem white;
-        text-shadow: 0px 0px 1px white;
-    }
-
-    .loginSec a{
-        text-decoration: none;
-        color: white;
-        font-family: "Red Hat Display", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-        font-style: normal;
-        font-size: 0.8rem;
-    }
-
-    .loginSec .icons{
-        display: flex;
-        gap: 1.2rem;
-        margin: 0.5rem;
-    }
-
-    .loginSec a:nth-of-type(1){
-        position: absolute;
-        top: 68%;
-        left: 69%;
-    }
-
-    .loginSec .icons i{
-        cursor: pointer;
-        padding: 0.9rem 0.4rem;
-        border: 1px solid whitesmoke;
-        border-radius: 0.3rem ;
-        box-shadow: 0px 0px 0.625rem white;
-    }
-
-    .loginSec .icons i:hover{
-        background-color: #9f78cb;
-        color: white;
-        box-shadow: 0px 0px 1.875rem white;
-    }
-
-    .loginSec:nth-of-type(2) button{
-        margin-top: 0.5rem;
-    }
-
-    .loginSec:nth-of-type(2){
-        display: none;
-    }
+.loginSec input:focus {
+    all: unset;
+    width: 26rem;
+    padding: 0.6rem;
+    padding-left: 1.8rem;
+    background-color: transparent;
+    border: 0.17rem solid rgb(205, 201, 201);
+    border-radius: 2rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    box-shadow: 0px 0px 2.5rem white;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin: 0.6rem 0;
+    color: white;
+}
 
 
+.loginSec input::placeholder {
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
 
+.loginSec .inputParent {
+    position: relative;
+}
 
+.loginSec .inputParent i {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-/* END - LOGINSEC */
+.loginSec div:nth-child(1) {
+    width: 35rem;
+    padding: 2rem 1rem;
+    background-color: transparent;
+    border: 0.15rem solid rgba(177, 149, 149, 0.2);
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10rem);
+    box-shadow: 0px 0px 2.188rem white;
+    position: relative;
+}
+
+.loginSec div:nth-child(1):hover {
+    box-shadow: 0px 0px 4rem white;
+    border: 0.05rem solid rgba(177, 149, 149, 0.2);
+}
+
+.loginSec button {
+    width: 12rem;
+    padding: 0.5rem;
+    background-color: #9f78cb;
+    text-transform: uppercase;
+    border: 0.08rem solid white;
+    border-radius: 2rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    box-shadow: 4px 4px 0.625rem black,
+        0px 0px 1.875rem white;
+    text-shadow: 0px 0px 1px white;
+}
+
+.loginSec a {
+    text-decoration: none;
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 0.8rem;
+}
+
+.loginSec .icons {
+    display: flex;
+    gap: 1.2rem;
+    margin: 0.5rem;
+}
+
+.loginSec a:nth-of-type(1) {
+    position: absolute;
+    top: 68%;
+    left: 69%;
+}
+
+.loginSec .icons i {
+    cursor: pointer;
+    padding: 0.9rem 0.4rem;
+    border: 1px solid whitesmoke;
+    border-radius: 0.3rem;
+    box-shadow: 0px 0px 0.625rem white;
+}
+
+.loginSec .icons i:hover {
+    background-color: #9f78cb;
+    color: white;
+    box-shadow: 0px 0px 1.875rem white;
+}
+
+.loginSec:nth-of-type(2) button {
+    margin-top: 0.5rem;
+}
+
+.loginSec:nth-of-type(2) {
+    display: none;
+}
 
 /* login.html */
+
+/* quizDesc.html */
+
+.quizDesc .quizDescContainer {
+    background-color: #fcd24f;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.7rem 0rem;
+    border: 0.1rem solid #f8f2de;
+}
+
+.quizDesc img {
+    width: 100%;
+    height: 28rem;
+    border-top: 0.08rem solid #f8f2de;
+    border-bottom: 0.08rem solid #f8f2de;
+}
+
+.quizDesc p:nth-child(1) {
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+}
+
+.iconsDiv p {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 0.7rem;
+    color: black;
+    text-align: center;
+}
+
+.quizDesc .iconsNav {
+    padding: 0.2rem 1.5rem 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;        
+}
+
+.quizDesc .iconsNav .iconsDiv div {
+    background-color: rgba(255, 255, 255, 0.791);
+    padding: 0.32rem 0.6rem;
+    border-radius: 0.8rem;
+    max-height: max-content;
+}
+
+.quizDesc button {
+    background-color: #ae3737;
+    padding: 0.5rem 2rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 0px 1rem white;
+    border: 0.01rem solid #f8f2de;
+}
+
+.quizDesc .descDiv{
+    background-color: #d84040;
+    padding: 1.5rem 3.5rem;
+    border-top: 0.15rem solid #f8f2de;
+    border-bottom: 0.15rem solid #f8f2de;
+}
+
+.quizDesc .descDiv p:nth-of-type(1){
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.8rem;
+
+}
+
+.quizDesc .descDiv p:nth-of-type(2){
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+
+.quizDesc .descDiv button{
+    background-color: aqua;
+}
+
+/* quizDesc.html */
 
 /* SRI KRISHNA */

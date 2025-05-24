@@ -4,31 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
     <title>Quizopedia</title>
 </head>
 <body>
-    <section>
-        <div>
-            <p>test your friendship - take the quiz now</p>
+
+    <!-- NAVIGATION BAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Quizopedia</a></li>
+        </ul>
+        <ul>
+            <li><div id="screenToggle"><div id="whiteCircle"></div></div></li>
+            <li><i class="fa-brands fa-searchengin" style="color: #ffffff;"></i></li>
+            <li><i class="fa-solid fa-user" style="color: #ffffff;"></i></li>
+            <li><i class="fa-solid fa-bars" style="color: #f8f2de;"></i></li>
+        </ul>
+    </nav>
+    <!-- NAVIGATION BAR -->
+
+    <!-- quizDesc -->
+    <section class="quizDesc">
+        <div class="quizDescContainer">
+            <p>Are You a True Friend? Find Out with This Quiz!</p>
             <img src="images/img1 (2).jpg" alt="">
-            <div>
-            <div>
-                <div><i class="fa-solid fa-bookmark fa-lg" style="color: #000000;"></i>
-                     <p>save</p></div>
-                <div><i class="fa-solid fa-thumbs-up fa-lg" style="color: #000000;"></i>
-                     <p>like</p></div>     
-                <div><i class="fa-solid fa-thumbs-down fa-lg" style="color: #000000;"></i>
-                     <p>dislike</p></div>
-                <div><i class="fa-solid fa-share fa-lg" style="color: #000000;"></i>
-                     <p>share</p></div>  
-                <div><i class="fa-solid fa-comment fa-lg" style="color: #000000;"></i>
-                     <p>comment</p></div>                             
+            <div class="iconsNav flex-row space-between">
+            <div class="iconsDiv flex-row gap-1">
+                <div class="flex-row center gap-half vertical-center"><i class="fa-regular fa-bookmark fa-xs" style="color: #000000;"></i>
+                     <p class="inline-block">save</p></div>
+                <div class="flex-row center gap-half vertical-center"><i class="fa-regular fa-thumbs-up fa-xs" style="color: #000000;"></i>
+                     <p class="inline-block">like</p></div>     
+                <div class="flex-row center gap-half vertical-center"><i class="fa-regular fa-thumbs-down fa-xs" style="color: #000000;"></i>
+                     <p class="inline-block">dislike</p></div>
+                <div class="flex-row center gap-half vertical-center"><i class="fa-solid fa-up-right-from-square fa-2xs" style="color: #000000;"></i>
+                     <p class="inline-block">share</p></div>  
+                <div class="flex-row center gap-half vertical-center"><i class="fa-regular fa-comment fa-xs" style="color: #000000;"></i>
+                     <p class="inline-block">comment</p></div>                             
             </div>
             <button>start quiz</button>
-            </div>
-            <div>
+            </div>            
+            <div class="descDiv">
                 <p>Think You’re a Great Friend? Let’s See If That’s True!</p>
                 <p>Friendship isn’t just about emojis and inside jokes — it’s about loyalty, trust, and showing up when it counts. Take this fun and revealing quiz to find out what kind of friend you really are!
+                Are you the dependable rock, the hype squad, or the ghost texter?
+                Answer honestly, and get ready to see how your friendship skills stack up!
+                Share with your besties and compare results — if you dare!
+                Friendship isn’t just about emojis and inside jokes — it’s about loyalty, trust, and showing up when it counts. Take this fun and revealing quiz to find out what kind of friend you really are!
                 Are you the dependable rock, the hype squad, or the ghost texter?
                 Answer honestly, and get ready to see how your friendship skills stack up!
                 Share with your besties and compare results — if you dare!</p>
@@ -36,5 +57,7 @@
             <button>show more like this</button>
         </div>
     </section>
+    <!-- quizDesc -->
+
 </body>
 </html>
