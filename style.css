@@ -61,6 +61,24 @@
 
 /* END -  UTILITY CLASSES */
 
+
+/* START - ANIMATIONS */
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.02);
+    }
+}
+
+/* END - ANIMATIONS */
+
+
+/* START - GLOBAL STYLES */
+
 * {
     margin: 0;
     padding: 0;
@@ -92,7 +110,7 @@ html {
 .container {
     position: relative;
     /* or 'relative' or 'fixed', depending on your layout */
-    max-width: 1400px;
+    max-width: 1600px;
     left: 50%;
     transform: translateX(-50%);
     overflow: hidden;
@@ -110,18 +128,18 @@ a {
     text-decoration: none;
 }
 
+/* START - GLOBAL STYLES */
+
+
 /* index.html */
 
 /* START-NAVIGATION BAR */
 
 nav {
-    padding: 0.6rem 1rem;
+    padding: 0.5rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid goldenrod;
-    box-shadow: 0px 0px 0.25rem gold;
-    margin-bottom: 1rem;
 }
 
 nav a {
@@ -176,6 +194,7 @@ nav i {
 
 /* END-NAVIGATION BAR */
 
+
 /* START-ALL KEYWORDS ROW */
 
 .keyWordsDiv {
@@ -183,6 +202,7 @@ nav i {
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    margin-top: 0.8rem;
 }
 
 .line {
@@ -227,6 +247,7 @@ nav i {
 
 /* END-ALL KEYWORDS ROW */
 
+
 /* START-HERO SECTION */
 
 .heroSec {
@@ -238,25 +259,15 @@ nav i {
 
 .quizCard-L {
     background-color: #fcd24f;
-    height: 22.5rem;
+    height: 25.5rem;
     border: 0.1rem solid #f8f2de;
     text-align: center;
     margin-bottom: 1.8rem;
     box-shadow: 2px 2px 1rem white;
 }
 
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.02);
-    }
-}
-
 .quizCard-L img {
-    height: 19.5rem;
+    height: 22.5rem;
     width: 100%;
     border: 0.001rem solid #f8f2de;
 }
@@ -361,8 +372,8 @@ nav ul {
     color: #FC5C7D;
 }
 
-
 /* END-HERO SECTION */
+
 
 /* START-LEADER BOARD & COMMENTS SECTION */
 
@@ -544,7 +555,6 @@ nav ul {
     min-height: 3rem;
 }
 
-
 .writeComment {
     padding: 0.4rem;
     background-color: #fcd24f;
@@ -659,11 +669,12 @@ nav ul {
 
 /* END-LEADER BOARD & COMMENTS SECTION */
 
+
 /* START - MOREQUIZES & MOREQUIZES2 */
 
 .moreQuizes,
 .moreQuizes2 {
-    margin: 2.2rem 1rem 0rem 1rem;
+    margin: 2.2rem 2.5rem 0rem 2.5rem;
 }
 
 .moreQuizes p:nth-child(1),
@@ -697,7 +708,7 @@ nav ul {
 }
 
 .moreQuizes2 .quizTopicCard img {
-    height: 10rem
+    height: 10rem;
 }
 
 .quizTopicCard:hover img {
@@ -785,8 +796,8 @@ nav ul {
     font-size: 1rem;
     border-radius: 0.8rem;
     padding: 0.35rem 0.65rem;
-    transform: translate(-50%, -57%);
-    top: 57%;
+    transform: translate(-50%, -61%);
+    top: 61%;
 }
 
 .moreQuizes .quizTopicCard:hover div,
@@ -798,19 +809,20 @@ nav ul {
 
 .moreQuizes .moreQuizesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: 1.99rem;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1.6rem;
 }
 
 .moreQuizes2 .moreQuizesGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 1.5rem;
+    gap: 1.3rem;
 }
 
 /* END - MOREQUIZES & MOREQUIZES2 */
 
 /* index.html */
+
 
 /* login.html */
 
@@ -996,27 +1008,41 @@ nav ul {
 
 /* login.html */
 
+
 /* quizDesc.html */
 
-.quizDesc .quizDescContainer {
-    background-color: #fcd24f;
+.quizDesc {
+    margin: 0.8rem 0.8rem 0rem 0.8rem;
+    display: grid;
+    grid-template-columns: 4.5fr 1.5fr;
+}
+
+.quizDesc .quizDescContainer{
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
     font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.7rem 0rem;
-    border: 0.1rem solid #f8f2de;
+    margin-right: 0.6rem;
+    position: relative;
+    height: max-content;
+   
+}
+
+.quizDesc .quizDescContainer .descTitle{
+     background-color: #ae3737;
+    color: white;
+    padding: 0.5rem 0;
+    border-top: 0.09rem solid white;
+    border-left: 0.09rem solid white;
+    border-right: 0.09rem solid white;
 }
 
 .quizDesc img {
     width: 100%;
-    height: 28rem;
-    border-top: 0.08rem solid #f8f2de;
-    border-bottom: 0.08rem solid #f8f2de;
+    height: 24rem;
+    border: 0.1rem solid #f8f2de;
+     box-shadow: 0px 4px 0.8rem white;
 }
 
 .quizDesc p:nth-child(1) {
@@ -1030,13 +1056,13 @@ nav ul {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: black;
     text-align: center;
 }
 
 .quizDesc .iconsNav {
-    padding: 0.2rem 1.5rem 0.7rem 1.5rem;
+    padding: 0.2rem 0.5rem 0.7rem 0.5rem;
     display: flex;
     align-items: center;        
 }
@@ -1048,9 +1074,9 @@ nav ul {
     max-height: max-content;
 }
 
-.quizDesc button {
+.quizDesc button{
     background-color: #ae3737;
-    padding: 0.5rem 2rem;
+    padding: 0.35rem 2rem;
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
     font-weight: 900;
@@ -1060,15 +1086,14 @@ nav ul {
     color: white;
     border-radius: 2rem;
     border: none;
-    box-shadow: 0px 0px 1rem white;
-    border: 0.01rem solid #f8f2de;
+    box-shadow: 4px 4px 0 white;
+    border: 0.1rem solid #f8f2de;
 }
 
 .quizDesc .descDiv{
     background-color: #d84040;
-    padding: 1.5rem 3.5rem;
-    border-top: 0.15rem solid #f8f2de;
-    border-bottom: 0.15rem solid #f8f2de;
+    padding: 1.5rem 2rem;
+    border: 0.15rem solid #f8f2de;
 }
 
 .quizDesc .descDiv p:nth-of-type(1){
@@ -1077,7 +1102,7 @@ nav ul {
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 
 }
 
@@ -1087,14 +1112,127 @@ nav ul {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
 }
 
-.quizDesc .descDiv button{
-    background-color: aqua;
+.quizDesc .showMoreBtn{
+    margin: 2rem 0 0 0;
+    right: 0rem;
+    position: absolute;
+
+}
+
+.quizDesc .quizCard-S img{
+    width: 5.8rem;
+    height: 3.2rem;
+    border: 0.06rem solid #f8f2de;
+    box-shadow: 1px 1px 0.4rem white;
 }
 
 /* quizDesc.html */
+
+/* quiz.html */
+
+.quiz-section{
+    background-color: #d84040;
+    margin: 0.8rem 4rem 3rem 4rem;
+}
+
+.quiz-section img{
+    width: 100%;
+    height: 26rem;
+    margin-bottom: 0.8rem;
+    border: 0.1rem solid #f8f2de;
+    box-shadow: 0px 0px 0.8rem white;
+}
+
+.quiz-section h1:nth-of-type(1), .quiz-section div:nth-of-type(3) p{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.2rem;
+    color: white;
+    text-transform: capitalize;
+    margin-left: 0.8rem;
+}
+
+.quiz-section div:nth-of-type(3) p{
+    margin: 1rem 0.8rem 2rem 0.8rem;
+}
+
+.quiz-section div:nth-of-type(1) div{
+    padding: 0.4rem 1.4rem;
+    background-color: #fcd24f;
+    margin-right: 0.8rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1rem;
+    color: black;
+    border-radius: 2rem;
+    border: 0.001rem solid black;
+}
+
+.quiz-section div:nth-of-type(1) div span{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    padding: 0.01rem 0.6rem;
+    margin-left: 0.2rem;
+    border-radius: 2rem;
+}
+
+.quiz-section .question {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: white;
+    margin: 1.2rem 6rem 0.8rem 6rem;
+}
+
+.quiz-section .optionBtn{
+    margin : 0.2rem 6rem;
+    padding: 0.8rem 0.8rem;
+    background-color: #fcd24f;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1rem;
+    text-align: left;
+    border: 0.09rem solid black;
+}
+
+.quiz-section div:nth-of-type(3) p{
+    color: white;
+
+}
+
+.nextBtn, .prevBtn{
+    background-color: #fcd24f;
+    padding: 0.4rem 2rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: black;
+    border-radius: 2rem;
+    border: none;
+    margin: 1.2rem 0.6rem;
+    height: max-content;
+}
+
+/* quiz.html */
 
 /* SRI KRISHNA */
