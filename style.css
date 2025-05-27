@@ -117,7 +117,14 @@ html {
 }
 
 body {
-    background-color: black;
+   --dot-bg: black;
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
 }
 
 ul {
@@ -1136,13 +1143,13 @@ nav ul {
 
 .quiz-section{
     background-color: #d84040;
-    margin: 0.8rem 4rem 3rem 4rem;
+    margin: 0.8rem 3rem 3rem 3rem;
 }
 
 .quiz-section img{
     width: 100%;
     height: 26rem;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     border: 0.1rem solid #f8f2de;
     box-shadow: 0px 0px 0.8rem white;
 }
@@ -1159,7 +1166,7 @@ nav ul {
 }
 
 .quiz-section div:nth-of-type(3) p{
-    margin: 1rem 0.8rem 2rem 0.8rem;
+    margin: 1.2rem 0.8rem 2rem 0.8rem;
 }
 
 .quiz-section div:nth-of-type(1) div{
@@ -1196,7 +1203,7 @@ nav ul {
     font-style: normal;
     font-size: 1.4rem;
     color: white;
-    margin: 1.2rem 6rem 0.8rem 6rem;
+    margin: 2rem 6rem 0.8rem 6rem;
 }
 
 .quiz-section .optionBtn{
@@ -1214,7 +1221,6 @@ nav ul {
 
 .quiz-section div:nth-of-type(3) p{
     color: white;
-
 }
 
 .nextBtn, .prevBtn{
@@ -1229,10 +1235,21 @@ nav ul {
     color: black;
     border-radius: 2rem;
     border: none;
-    margin: 1.2rem 0.6rem;
+    margin: 1rem 0.6rem;
     height: max-content;
 }
 
+.quizName{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: 2.6rem;
+    color: white;
+    text-align: center;
+    margin: 0.8rem 0;
+}
 /* quiz.html */
 
 /* SRI KRISHNA */
