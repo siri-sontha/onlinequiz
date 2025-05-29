@@ -109,7 +109,6 @@ html {
 
 .container {
     position: relative;
-    /* or 'relative' or 'fixed', depending on your layout */
     max-width: 1600px;
     left: 50%;
     transform: translateX(-50%);
@@ -117,14 +116,14 @@ html {
 }
 
 body {
-   --dot-bg: black;
+     --dot-bg: black;
   --dot-color: white;
   --dot-size: 1px;
   --dot-space: 22px;
-	background:
-		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
-		var(--dot-color);
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
 }
 
 ul {
@@ -143,10 +142,11 @@ a {
 /* START-NAVIGATION BAR */
 
 nav {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 nav a {
@@ -173,30 +173,107 @@ nav ul li:nth-of-type(1) {
 
 nav i {
     font-size: 0.8rem;
-    background-color: rgb(65, 65, 65);
+    background-color: rgba(255, 255, 255, 0.279);
     padding: 0.35rem 0.45rem;
     border-radius: 50%;
     box-shadow: 0px 0px 0.5rem white;
     border: 1px solid white;
 }
 
-#screenToggle {
-    height: 1.4rem;
-    width: 3rem;
-    background-color: black;
-    border-radius: 2rem;
-    position: relative;
+nav ul:nth-of-type(2) li:nth-of-type(3) i{
+    position: absolute;
+    margin-left: 0.2rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0px 0px 0px;
+    margin-top: 0.5rem;
 }
 
-#whiteCircle {
+nav input{
+    height: 1.58rem;
+    width: 18rem;
+    background-color: rgba(255, 255, 255, 0.279);
+    border-radius: 5rem;
+    border: 1px solid white;
+    box-shadow: 0px 0px 0.5rem white;
+    position: relative;
+    padding-left: 1.95rem;
+    color: white;
+}
+
+nav input::placeholder{
+    color: white;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.68rem;
+    text-transform: capitalize;
+    
+}
+
+nav input li:nth-of-type(3) i:nth-of-type(2){
+    position: absolute;
+   
+}
+
+nav .searchDiv{
+    display: none;
+}
+
+#screenToggle {
+    height: 1.45rem;
+    width: 3.15rem;
+    background-color: rgba(255, 255, 255, 0.279);
+    border: 1px solid white;
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: 0px 0px 0.5rem white;
+}
+
+
+#circle {
     height: 1rem;
     width: 1rem;
     background-color: white;
     border-radius: 2rem;
     position: absolute;
     top: 50%;
-    left: 0.15rem;
+    left: 0.2rem;
     transform: translateY(-50%);
+    border: 1px solid grey;
+}
+
+.navSec{
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    --dot-bg: black;
+  --dot-color: white;
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+    top: 0;
+   
+
+}
+
+.navSec li{
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.1rem;
+    color: #c076b9;
+    text-align: center;
+    
 }
 
 /* END-NAVIGATION BAR */
@@ -681,7 +758,7 @@ nav ul {
 
 .moreQuizes,
 .moreQuizes2 {
-    margin: 2.2rem 2.5rem 0rem 2.5rem;
+    margin: 2.2rem 2.5rem 4rem 2.5rem;
 }
 
 .moreQuizes p:nth-child(1),
@@ -754,6 +831,7 @@ nav ul {
     padding-right: 0.5rem;
     padding: 1rem 0.5rem 0rem 0.5rem;
     margin-bottom: 0.5rem;
+    text-transform: capitalize;
 }
 
 .moreQuizes2 .quizTopicCard p:nth-of-type(1) {
@@ -771,6 +849,7 @@ nav ul {
     text-align: left;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
+    
 
 }
 
@@ -791,9 +870,9 @@ nav ul {
     font-optical-sizing: auto;
     position: absolute;
     z-index: 1;
-    transform: translate(-50%, -68%);
-    top: 68%;
+    transform: translate(-50%, -0rem);
     left: 50%;
+    top: 13rem;
     white-space: nowrap;
     font-weight: 1000;
     box-shadow: 0 0px 0.9rem #f8f2de;
@@ -985,7 +1064,13 @@ nav ul {
     margin: 0.5rem;
 }
 
-.loginSec a:nth-of-type(1) {
+.loginSec .backIcon{
+    left: 2rem;
+    position: absolute;
+    top: 2rem;
+}
+
+.loginSec a:nth-of-type(2) {
     position: absolute;
     top: 68%;
     left: 69%;
