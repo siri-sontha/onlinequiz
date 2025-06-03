@@ -104,7 +104,7 @@ const quizData = [
 ];
 
 
-let timeLeft = 60;
+let timeLeft = 180;
 const timer = document.querySelector('.timer');
 let timerInterval;
 
@@ -143,11 +143,11 @@ const optionButtons = [
 
 function showQuestion() {
     const q = quizData[currentQuestion];
-    question.textContent += q.question;
+    question.textContent = q.question;
     questionNum.textContent = currentQuestion + 1;
     q.options.forEach((option, index) => {
     const button = optionButtons[index];
-    button.textContent += option;
+    button.textContent = option;
     button.style.backgroundColor = ''; // reset background color
     button.style.display = 'inline-block';
     button.disabled = false;
