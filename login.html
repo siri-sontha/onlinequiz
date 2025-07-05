@@ -1,0 +1,124 @@
+<!-- Sri Krishna -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizopedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loginBody">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Quizopedia</a></li>
+        </ul>
+        <ul>
+            <li><div id="screenToggle"><div id="circle"></div></div></li>
+            <li class="searchToggle"><i class="fa-brands fa-searchengin" style="color: #ffffff;"></i></li>
+            <li class="searchDiv"><i class="fa-brands fa-searchengin fa-lg" style="color: #ffffff;"></i><input type="text" placeholder="Search your Quiz"/></li>
+            <li><a href="login.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a></li>
+            <li><i class="fa-solid fa-bars menu" style="color: #f8f2de;"></i></li>
+        </ul>
+    </nav>
+
+    <nav class="navSec">
+        <ul class="flex-col ">
+            <li><i class="fa-solid fa-xmark fa close" style="color: #ffffff;"></i></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="login.html#signupSec">Signup</a></li>
+            <li><a href="quizDesc.html">Quiz Description</a></li>
+            <li><a href="quiz.html">Quiz Page</a></li>
+            <li><a href="index.html#leaderBoardChatBoxSec">Leader Board</a></li>
+            <li><a href="index.html#leaderBoardChatBoxSec">Chat Box</a></li>
+            <li><a href="explore-topics.html">Explore topics</a></li>
+            <li><a href="quizzes.html">Quizes</a></li>
+        </ul>
+    </nav>
+
+    <section class="loginSec" id="loginSec">
+        <div>
+        <a class="backIcon" href="index.html"><i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i></a>
+		<h1>Login</h1>
+
+        <div class="icons">
+            <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin-in fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-reddit fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter fa-lg" style="color: #ffffff;"></i>
+        </div>
+
+        <div class="inputParent">
+		    <input type="email" name="email" placeholder="Enter Your Email" id="logInEmail">
+            <i class="fa-solid fa-envelope fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+        <div class="inputParent">
+		    <input type="password" name="password" placeholder="Enter Your Password" id="logInPassword">
+            <i class="fa-solid fa-lock fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+        <a>Forgot Password</a>
+
+		<button name="loginBtn">Log In</button>
+		<a id="dontHaveAccBtn">Don't have an account? Sign Up</a>
+        
+        </div>
+	</section>
+
+    <section class="loginSec" id="signupSec">
+        <div>
+        <a class="backIcon" href="index.html"><i class="fa-solid fa-arrow-left fa-xl" style="color: #ffffff;"></i></a>
+		<h1>Signup</h1>
+
+         <div class="icons">
+            <i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin-in fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-reddit fa-lg" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-twitter fa-lg" style="color: #ffffff;"></i>
+        </div>
+
+
+        <div class="inputParent">
+		    <input type="email" name="email" placeholder="Enter Your Email" id="singnUpEmail">
+            <i class="fa-solid fa-envelope fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+         <div class="inputParent">
+		    <input type="text" name="username" placeholder="Enter Your Username" id="singnUpPassword">
+            <i class="fa-solid fa-circle-user fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+        <div class="inputParent">
+		    <input type="password" name="password" placeholder="Enter Your Password" id="singnUpPassword">
+            <i class="fa-solid fa-lock fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+        <div class="inputParent">
+		    <input type="password" name="password" placeholder="Confirm Your Password" id="singnUpPassword">
+            <i class="fa-solid fa-lock fa-lg" style="color: #ffffff;"></i>
+            <div id="errorDivLogIn" class="errorDivLogIn"></div>
+        </div>
+
+        <a></a> <!-- keep it empty -->
+
+		<button name="singnUpBtn">Sign Up</button>
+		<a id="haveAccBtn">Have an account? Log In</a>
+        </div>
+	</section>
+<script src="login.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
+
+<!-- Sri Krishna -->
